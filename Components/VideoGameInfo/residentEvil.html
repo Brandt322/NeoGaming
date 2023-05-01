@@ -1,44 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NeoGaming 🧬🕹</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-    </form>
-    <h1>NeoGaming</h1>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-      </ul>
-    </nav>
+    <header class="header">
+      <h1 class="header__title">NeoGaming</h1>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="../../index.html">Inicio</a></li>
+        </ul>
+      </nav>
     </header>
-    <article>
-      <h3>Resident Evil 4</h3>
-      <img src="../assets/re4.png" alt="Resident Evil 4" />
-      <p>Desarrollado por: Capcom</p>
-      <p>Publicado por: Capcom</p>
-      <p>Fecha del trailer: 20/10/2022</p>
-      <p>Fecha de lanzamiento: 23 de Marzo del 2023</p>
-      <ul>
-        <li>Género: Survival horror, Acción</li>
-        <li>Plataformas: PlayStation 5, PlayStation 5, Xbox Series X|S, PC</li>
-        <li>Clasificación: ESBR Mature 17+</li>
+    <article class="article">
+      <h3 class="article__title">Resident Evil 4</h3>
+      <img
+        src="../../assets/re4.png"
+        alt="Resident Evil 4"
+        class="article__image"
+      />
+      <p class="article__developer">Desarrollado por: Capcom</p>
+      <p class="article__publisher">Publicado por: Capcom</p>
+      <p class="article__trailer-date">Fecha del trailer: 20/10/2022</p>
+      <p class="article__release-date">Fecha de lanzamiento: 23 de Marzo del 2023</p>
+      <ul class="article__details-list">
+        <li class="article__details-item">Género: Survival horror, Acción</li>
+        <li class="article__details-item">Plataformas: PlayStation 5, PlayStation 5, Xbox Series X|S, PC</li>
+        <li class="article__details-item">Clasificación: ESBR Mature 17+</li>
       </ul>
       <iframe
         width="560"
         height="420"
         src="https://www.youtube.com/embed/E69tKrfEQag"
         title="Resident Evil 4 - 2nd Trailer | PS5 Games"
+        class="article__iframe"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
       ></iframe>
-      <h4>Descripción:</h4>
-      <p>
+      <h4 class="article__description-title">Descripción:</h4>
+      <p class="article__description-text">
         Resident Evil 4 es una versión actualizada del juego original de 2005,
         uno de los títulos más populares y aclamados de la serie. En este juego,
         los jugadores asumen el papel del agente especial Leon S. Kennedy
@@ -47,8 +52,8 @@
         y nuevas características, Resident Evil 4 promete ser una experiencia
         emocionante y aterradora para los fanáticos de la serie.
       </p>
-      <h4>Requisitos del sistema:</h4>
-      <table class="requisitos" border="2">
+      <h4 class="article__requirements-title">Requisitos del sistema:</h4>
+      <table class="article__requirements-table">
         <thead>
           <tr>
             <th>Sistema operativo</th>

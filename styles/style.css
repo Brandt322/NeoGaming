@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header: #0a1929;
+  --card-title: #fff;
+  --card-date: #bd9e59;
+  --card-preview: #aaabca;
+  --component-bg: #141136;
+  --component-title: #333;
+}
