@@ -1,4 +1,4 @@
-@import url("../../styles/style.css");
+/* @import url("../../styles/style.css"); */
 /* Estilo del artículo de Resident Evil 4 */
 
 :root {
@@ -49,6 +49,10 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
+}
+
+.header span {
+  color: var(--card-date);
 }
 
 article {
