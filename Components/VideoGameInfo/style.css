@@ -1,8 +1,14 @@
-@import url("../../styles/style.css");
+/* @import url("../../css/style.css"); */
 /* Estilo del artículo de Resident Evil 4 */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  --header: #0a1929;
+  --header: #1d1546;
   --card-title: #fff;
   --card-date: #bd9e59;
   --card-preview: #aaabca;
@@ -45,10 +51,15 @@ body {
   font-size: 18px;
 }
 
+.header span {
+  color: var(--card-date);
+}
+
+/* * STYLES ARTICLE */
 article {
   width: 100%;
+  cursor: default;
 }
-/* * STYLES ARTICLE */
 /* ! ARTICLE SECCION IMAGE */
 article .article__image {
   width: 100%;
