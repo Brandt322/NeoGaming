@@ -116,6 +116,10 @@ article .article__content .article__content {
   line-height: 40px;
 }
 
+.article__details-item{
+  list-style: none;
+}
+
 .article__content .article__content-requiremnts {
   color: var(--component-text-general);
   width: 1100px;
