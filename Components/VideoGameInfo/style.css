@@ -168,6 +168,7 @@ article .article__content .article__content {
 /* ! MEDIA QUERIES */
 @media screen and (max-width: 600px) {
   article .article__title {
+    text-align: center;
     font-size: 3rem;
     text-shadow: 3.5px 3.5px 1px var(--card-date);
   }
