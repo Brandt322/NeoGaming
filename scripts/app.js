@@ -45,7 +45,7 @@ function updateHeaderColors(isScrolled) {
 
   if (isScrolled) {
     header.classList.add("scrolled");
-  } else {
+  } else {  
     header.classList.remove("scrolled");
   }
 }

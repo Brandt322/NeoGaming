@@ -1,8 +1,12 @@
-@import url("../../styles/style.css");
+@import url("../../css/style.css");
 /* Estilo del artículo de Resident Evil 4 */
 
+body {
+  font-size: 100%;
+}
+
 :root {
-  --header: #0a1929;
+  /* --header: #0a1929; */
   --card-title: #fff;
   --card-date: #bd9e59;
   --card-preview: #aaabca;
@@ -48,6 +52,7 @@ body {
 article {
   width: 100%;
 }
+
 /* * STYLES ARTICLE */
 /* ! ARTICLE SECCION IMAGE */
 article .article__image {
@@ -94,6 +99,10 @@ article .article__descripcion {
 /* ! ARTICLE CONTENT */
 article .article__content .article__content {
   width: 100%;
+}
+
+.article__details-list {
+  list-style: none;
 }
 
 .article__content-title {
