@@ -60,15 +60,35 @@ window.addEventListener("scroll", function () {
 const btnAddComent = document.getElementById("btnComentar");
 const areaComents = document.querySelector(".article_coments-body");
 const coments = document.querySelector(".coment");
+let count = 1;
 btnAddComent.addEventListener("click", (e) => {
   e.preventDefault();
-  let spanComent = document.createElement("div");
-  let imgUser = document.createElement("img");
-  imgUser.src = "./../../assets/Component/user.svg";
-  spanComent.appendChild(imgUser);
-  let pComent = document.createElement("label");
-  pComent.innerText = document.formAddComents.txtComent.value;
-  spanComent.appendChild(pComent);
-  coments.appendChild(spanComent);
-  document.formAddComents.txtComent.value = "";
+
+  if (document.formAddComents.txtComent.value == "") {
+    alert("Para hacer un comentario debe escribir una palabra por lo menos.");
+    return false;
+  } else {
+    let spanComent = document.createElement("div");
+    let imgUser = document.createElement("img");
+    let nameUser = document.createElement("h5");
+    // * LE DOY UNA IMAGEN ESTA TICA AL USER
+    imgUser.src = "./../../assets/Component/user.svg";
+    // * NOMBRE DE USER
+    nameUser.innerText = "User " + count++;
+    // * OBTENIEDO EL TEXTAREA DEL FORM Y HACIENDO LA PRIMERA LETRA EN MAYUSCULA
+    let pComent = document.createElement("p");
+    pComent.innerText =
+      document.formAddComents.txtComent.value[0].toUpperCase() +
+      document.formAddComents.txtComent.value.slice(1);
+
+    // * AL DIV CREADO LE AGREMO MIS 3 ELEMENTOS PRINCIPALES PARA EL COMENTARIO
+    spanComent.appendChild(nameUser);
+    spanComent.appendChild(imgUser);
+    spanComent.appendChild(pComent);
+
+    // * AHORA AGREGO TODOS LOS COMENTARIOS EN UNA CAJA
+    coments.appendChild(spanComent);
+    document.formAddComents.txtComent.value = "";
+    alert("Se comentó con exito.");
+  }
 });

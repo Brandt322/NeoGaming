@@ -283,7 +283,14 @@ article .article__content .article__content {
 
 .article__coments .coment div{
   border-bottom: solid 1px white;
-  margin-top: .5rem;
+  margin-top: 1rem;
+  white-space: pre-line;
+  width: 100%;
+  /* overflow: scroll; */
+  /* height: 100px; */
+  color: var(--card-preview);
+  text-align: justify;
+  word-wrap: break-word;
 }
 
 .article__coments .coment div p{
