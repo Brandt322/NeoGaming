@@ -74,12 +74,12 @@ body {
   transition: all 300ms;
 }
 
-.header-option.selected a {
+.header-option.isActive a {
   /* Estilos para la opción activa en el encabezado */
   color: var(--card-date);
 }
 
-.header.scrolled .header-option.selected a {
+.header.scrolled .header-option.isActive a {
   /* Estilos para la opción de scroll y activa en el encabezado */
   color: var(--component-bg);
 }

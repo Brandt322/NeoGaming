@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+</head>
+<body id="login">
+  <header class="header">
+    <h1>Neo<span class="gaming">Gaming</span></h1>
+    <nav class="nav">
+      <ul>
+        <li class="header-option"><a class="nav-item"  href="../../index.html">Inicio</a></li>
+        <li class="header-option"><a class="nav-item" href="#nosotros">Nosotros</a></li>
+        <li class="header-option"><a class="nav-item"  href="#contacto">Contacto</a></li>
+        <li class="header-option"><a class="nav-item" target="_blank" href="https://brandt322.github.io/NeoGaming/">Github</a></li>
+        <li class="header-option selected"><a class="nav-item"  href="#login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="app">
+      <div class="card">
+        <h1 class="title">Iniciar <span class="primary">sesion</span></h1>
+        <form class="form">
+          <button class="form-button">
+            <img 
+              src="../../assets/Component/google.png" 
+              alt="asd" 
+              class="button-icon" />
+            Ingresa con google
+          </button>
+          <div class="mail-input">
+            <img 
+              class="mail-icon" 
+              src="../../assets/Component/user-tag.svg" 
+              alt="lock">
+            <input 
+              type="email" 
+              class="input" 
+              name="email"
+              pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" 
+              placeholder="Correo electrónico">
+          </div>
+          <div class="mail-input">
+            <img 
+              class="mail-icon" 
+              src="../../assets/Component/lock.svg" 
+              alt="lock">
+            <input 
+              type="password" 
+              class="input" 
+              name="password" 
+              placeholder="Contraseña">
+            <p id="alertUserEmail"></p>
+          </div>
+          <button type="submit" class="form-button">Log in</button>
+        </form>
+        <div class="links">
+          <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+          <a href="#" class="link">Regístrate</a>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
