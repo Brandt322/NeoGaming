@@ -92,7 +92,7 @@ article .article__plataforms img {
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
-  transition: background-color .3s linear;
+  transition: background-color 0.3s linear;
 }
 
 article .article__plataforms img:hover {
@@ -242,4 +242,50 @@ article .article__content .article__content {
     width: 90%;
     height: 400px;
   }
+}
+
+/* ! FORMULARIO PARA EL COMENTARIO */
+.article__coments {
+  width: 100%;
+}
+
+.article__coments-form {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.article__coments #btnComentar {
+  border: 0;
+  font-size: larger;
+  padding: 0.5rem;
+  background-color: var(--card-date);
+}
+
+.article__coments label {
+  font-size: large;
+}
+
+.article__coments textarea {
+  width: 100%;
+  font-size: larger;
+  border: none;
+  letter-spacing: 1px;
+  resize: none;
+  overflow: scroll;
+}
+
+.article_coments-body {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.article__coments .coment div{
+  border-bottom: solid 1px white;
+  margin-top: .5rem;
+}
+
+.article__coments .coment div p{
+  margin-left: .2rem;
 }
