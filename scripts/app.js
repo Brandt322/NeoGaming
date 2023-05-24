@@ -29,20 +29,27 @@ window.addEventListener("scroll", function () {
   updateHeaderColors(isScrolled);
 });
 
-// ! Creacion de los comentarios
+// ! Buscar cards
+const inputBuscar = document.querySelector("#buscar");
+const cardContainer = document.querySelector(".tarjetas");
+const cards = cardContainer.getElementsByClassName("tarjeta");
 
-const btnAddComent = document.getElementById("btnComentar");
-const areaComents = document.querySelector(".article_coments-body");
-const coments = document.querySelector(".coment");
-btnAddComent.addEventListener("click", (e) => {
-  e.preventDefault();
-  let spanComent = document.createElement("div");
-  let imgUser = document.createElement("img");
-  imgUser.src = "./../../assets/Component/user.svg";
-  spanComent.appendChild(imgUser);
-  let pComent = document.createElement("label");
-  pComent.innerText = document.formAddComents.txtComent.value;
-  spanComent.appendChild(pComent);
-  coments.appendChild(spanComent);
-  document.formAddComents.txtComent.value = "";
+let timeoutId;
+
+inputBuscar.addEventListener("keyup", () => {
+  clearTimeout(timeoutId); // Cancelar el timeout anterior si existe
+
+  // Establecer un nuevo timeout de 0.5 segundos
+  timeoutId = setTimeout(() => {
+    const filter = inputBuscar.value.toLowerCase();
+
+    Array.from(cards).forEach((item) => {
+      let title = item.querySelector(".title");
+      if (title.innerText.toLowerCase().indexOf(filter) > -1) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }, 500); // 500 milisegundos
 });
