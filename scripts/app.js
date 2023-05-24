@@ -29,40 +29,28 @@ window.addEventListener("scroll", function () {
   updateHeaderColors(isScrolled);
 });
 
-// ! Creacion de los comentarios
+// ! Buscar cards 
+// TODO: Mejorar la busqueda para cuando se tenga muchas cards
+const inputBuscar = document.querySelector("#buscar");
+const cardContainer = document.querySelector(".tarjetas");
+const cards = cardContainer.getElementsByClassName("tarjeta");
 
-const btnAddComent = document.getElementById("btnComentar");
-const areaComents = document.querySelector(".article_coments-body");
-const coments = document.querySelector(".coment");
-let count = 1;
-btnAddComent.addEventListener("click", (e) => {
-  e.preventDefault();
+let timeoutId;
 
-  if (document.formAddComents.txtComent.value == "") {
-    alert("Para hacer un comentario debe escribir una palabra por lo menos.");
-    return false;
-  } else {
-    let spanComent = document.createElement("div");
-    let imgUser = document.createElement("img");
-    let nameUser = document.createElement("h5");
-    // * LE DOY UNA IMAGEN ESTA TICA AL USER
-    imgUser.src = "./../../assets/Component/user.svg";
-    // * NOMBRE DE USER
-    nameUser.innerText = "User " + count++;
-    // * OBTENIEDO EL TEXTAREA DEL FORM Y HACIENDO LA PRIMERA LETRA EN MAYUSCULA
-    let pComent = document.createElement("p");
-    pComent.innerText =
-      document.formAddComents.txtComent.value[0].toUpperCase() +
-      document.formAddComents.txtComent.value.slice(1);
+inputBuscar.addEventListener("keyup", () => {
+  clearTimeout(timeoutId); // Cancelar el timeout anterior si existe
 
-    // * AL DIV CREADO LE AGREMO MIS 3 ELEMENTOS PRINCIPALES PARA EL COMENTARIO
-    spanComent.appendChild(nameUser);
-    spanComent.appendChild(imgUser);
-    spanComent.appendChild(pComent);
+  // Establecer un nuevo timeout de 0.5 segundos
+  timeoutId = setTimeout(() => {
+    const filter = inputBuscar.value.toLowerCase();
 
-    // * AHORA AGREGO TODOS LOS COMENTARIOS EN UNA CAJA
-    coments.appendChild(spanComent);
-    document.formAddComents.txtComent.value = "";
-    alert("Se comentó con exito.");
-  }
+    Array.from(cards).forEach((item) => {
+      let title = item.querySelector(".title");
+      if (title.innerText.toLowerCase().indexOf(filter) > -1) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }, 500); // 500 milisegundos
 });
