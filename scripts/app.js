@@ -29,7 +29,8 @@ window.addEventListener("scroll", function () {
   updateHeaderColors(isScrolled);
 });
 
-// ! Buscar cards
+// ! Buscar cards 
+// TODO: Mejorar la busqueda para cuando se tenga muchas cards
 const inputBuscar = document.querySelector("#buscar");
 const cardContainer = document.querySelector(".tarjetas");
 const cards = cardContainer.getElementsByClassName("tarjeta");
